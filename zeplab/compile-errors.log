@@ -37,5 +37,21 @@
    80 | ZEND_API void zval_ptr_dtor(zval *zval_ptr);
       |                                   ^
 3 warnings generated.
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/foo.zep.c:43:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
+   43 |                 Z_PARAM_STR(txt)
+      |                 ^~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/php/8.4.13/include/php/Zend/zend_API.h:2087:2: note: expanded from macro 'Z_PARAM_STR'
+ 2087 |         Z_PARAM_STR_EX(dest, 0, 0)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/php/8.4.13/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
+ 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/php/8.4.13/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
+  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
+      |                                                    ^~~~~~~~~
+/opt/homebrew/Cellar/php/8.4.13/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
+ 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
+      |                                                                            ^
+1 warning generated.
 ld: warning: -undefined suppress is deprecated
 warning: no debug symbols in executable (-arch arm64)

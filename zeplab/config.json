@@ -67,7 +67,9 @@
             {
                 "rows":
                 [
-                    ["homepage", "https://schrodt.nrw"]
+                    ["homepage", "https://schrodt.nrw"],
+                    ["github", "https://github.com/SchrodtSven/ZepLab"],
+                    ["demo", "https://projx.schrodt.nrw/ZepLab"]
                 ]
             }
     ],

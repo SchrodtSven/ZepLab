@@ -6,4 +6,9 @@ class Foo
     {
         echo "Foo";
     }
+
+    public function mirror(string txt) -> string
+    {
+        return strrev(txt);
+    } 
 }

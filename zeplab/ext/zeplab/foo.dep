@@ -91,4 +91,5 @@ zeplab/foo.lo: \
   kernel/main.h \
   /opt/homebrew/Cellar/php/8.4.13/include/php/ext/spl/spl_exceptions.h \
   /opt/homebrew/Cellar/php/8.4.13/include/php/ext/spl/spl_iterators.h \
-  kernel/exception.h kernel/object.h kernel/globals.h
+  kernel/exception.h kernel/object.h kernel/globals.h kernel/fcall.h \
+  php_ext.h kernel/memory.h kernel/fcall_internal.h kernel/operators.h
