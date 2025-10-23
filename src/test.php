@@ -2,4 +2,4 @@
 
 use ZepLab\Foo;
 
-(new Foo())->foo();
+echo (new Foo())->mirror("Sven Glück auf!");
