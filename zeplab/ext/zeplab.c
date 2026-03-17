@@ -23,7 +23,9 @@
 
 
 
-zend_class_entry *zeplab_foo_ce;
+zend_class_entry *zeplab_core_foo_ce;
+zend_class_entry *zeplab_ztype_listclass_ce;
+zend_class_entry *zeplab_ztype_stringclass_ce;
 
 ZEND_DECLARE_MODULE_GLOBALS(zeplab)
 
@@ -35,7 +37,9 @@ static PHP_MINIT_FUNCTION(zeplab)
 {
 	REGISTER_INI_ENTRIES();
 	zephir_module_init();
-	ZEPHIR_INIT(ZepLab_Foo);
+	ZEPHIR_INIT(ZepLab_Core_Foo);
+	ZEPHIR_INIT(ZepLab_ZType_ListClass);
+	ZEPHIR_INIT(ZepLab_ZType_StringClass);
 	
 	return SUCCESS;
 }
@@ -114,6 +118,8 @@ static PHP_MINFO_FUNCTION(zeplab)
 	php_info_print_table_end();
 		php_info_print_table_start();
 	php_info_print_table_row(2, "homepage", "https://schrodt.nrw");
+	php_info_print_table_row(2, "email", "sven@schrodt.nrw");
+	php_info_print_table_row(2, "github", "https://github.com/SchrodtSven/ZepLab");
 	php_info_print_table_end();
 
 	DISPLAY_INI_ENTRIES();

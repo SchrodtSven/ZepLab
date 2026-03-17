@@ -9,7 +9,7 @@
  * - parsing single file to be get from CLI arg
  *      <code>ze_parse path/to/file</code>
  * 
- * - parsing directory recursively - to be get from CLI arg
+ * - parsing directory recursively - to get from CLI arg
  *      <code>ze_parse dir/</code>
  * 
  */

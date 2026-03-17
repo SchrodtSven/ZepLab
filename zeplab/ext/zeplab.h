@@ -4,6 +4,8 @@
 #ifndef ZEPHIR_CLASS_ENTRIES_H
 #define ZEPHIR_CLASS_ENTRIES_H
 
-#include "zeplab/foo.zep.h"
+#include "zeplab/core/foo.zep.h"
+#include "zeplab/ztype/listclass.zep.h"
+#include "zeplab/ztype/stringclass.zep.h"
 
 #endif

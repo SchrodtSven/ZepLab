@@ -59,19 +59,18 @@
     },
     "namespace": "zeplab",
     "name": "zeplab",
-    "description": "Personal Zephir Playground",
+    "description": "Playground, Incubator & Laboratory for PHP 8.4+ extensions built in Zephir",
     "author": "Sven Schrodt",
     "version": "0.0.1",
     "verbose": true,
     "info": [
-            {
-                "rows":
-                [
-                    ["homepage", "https://schrodt.nrw"],
-                    ["github", "https://github.com/SchrodtSven/ZepLab"],
-                    ["demo", "https://projx.schrodt.nrw/ZepLab"]
-                ]
-            }
+        {
+            "rows": [
+                ["homepage", "https://schrodt.nrw"],
+                ["email", "sven@schrodt.nrw"],
+                ["github", "https://github.com/SchrodtSven/ZepLab"]
+            ]
+        }
     ],
     "requires": {
         "extensions": []

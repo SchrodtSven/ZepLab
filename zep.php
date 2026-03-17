@@ -8,6 +8,7 @@ require_once 'src/PreParser.php';
 
 $file = [
     "zeplab/zeplab/Foo.zep",
+    "zeplab/zeplab/ZType/StringClass.zep",
 ];
 
 $parser = new PreParser($file);

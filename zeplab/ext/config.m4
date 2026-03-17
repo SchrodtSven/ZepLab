@@ -9,10 +9,12 @@ if test "$PHP_ZEPLAB" = "yes"; then
 	fi
 
 	AC_DEFINE(HAVE_ZEPLAB, 1, [Whether you have Zeplab])
-	zeplab_sources="zeplab.c kernel/main.c kernel/memory.c kernel/exception.c kernel/debug.c kernel/backtrace.c kernel/object.c kernel/array.c kernel/string.c kernel/fcall.c kernel/require.c kernel/file.c kernel/operators.c kernel/math.c kernel/concat.c kernel/variables.c kernel/filter.c kernel/iterator.c kernel/time.c kernel/exit.c zeplab/foo.zep.c "
+	zeplab_sources="zeplab.c kernel/main.c kernel/memory.c kernel/exception.c kernel/debug.c kernel/backtrace.c kernel/object.c kernel/array.c kernel/string.c kernel/fcall.c kernel/require.c kernel/file.c kernel/operators.c kernel/math.c kernel/concat.c kernel/variables.c kernel/filter.c kernel/iterator.c kernel/time.c kernel/exit.c zeplab/core/foo.zep.c
+	zeplab/ztype/listclass.zep.c
+	zeplab/ztype/stringclass.zep.c "
 	PHP_NEW_EXTENSION(zeplab, $zeplab_sources, $ext_shared,, )
 	PHP_ADD_BUILD_DIR([$ext_builddir/kernel/])
-	for dir in "zeplab"; do
+	for dir in "zeplab/core zeplab/ztype"; do
 		PHP_ADD_BUILD_DIR([$ext_builddir/$dir])
 	done
 	PHP_SUBST(ZEPLAB_SHARED_LIBADD)
