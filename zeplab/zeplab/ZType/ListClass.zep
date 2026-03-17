@@ -12,9 +12,11 @@
 
 namespace ZepLab\ZType;
 
-class ListClass
+class ListClass implements \Countable, \ArrayAccess, \Iterator
 {
     protected cont; // content of current instance
+
+    protected pos = 0;  // current/initial position of list element
 
     public function __construct(array cont = [])
     {
@@ -30,6 +32,108 @@ class ListClass
         return this->cont;
     }
 
+    public function count() -> int
+    {
+        return count(this->cont);
+    }
+
+    // Implementing \ArrayAccess 
+
+    public function offsetSet(offs, value) -> void 
+    {
+        if (is_null(offs)) {
+            let this->cont[] = value;
+        } else {
+            let this->cont[offs] = value;
+        }
+    }
+
+    public function offsetExists(offs) -> bool 
+    {
+        return isset(this->cont[offs]);
+    }
+
+    public function offsetUnset(offs) -> void 
+    {
+        unset(this->cont[offs]);
+    }
+
+    public function offsetGet(offs) -> mixed 
+    {
+        return isset(this->cont[offs]) ? this->cont[offs]  : null;
+    }
+
+    // Stack operations
+
+    public function push(mixed value)
+    {
+        array_push(this->cont, value);
+        return this;
+    }
+
+    public function pop() -> mixed
+    {
+        return array_pop(this->cont);
+    }
+
+    public function unshift(mixed value)
+    {
+        array_unshift(this->cont, value);
+        return this;
+    }
+
+    public function shift() -> mixed
+    {
+        return array_shift(this->cont);
+        
+    }
+
+    /**
+     * Gets the first key|index of an array
+     *
+     * @return string|integer|null
+     */
+    public function firstKey() -> string|int|null
+    {
+        return array_key_first($this->cont);
+    }
+
+    /**
+     * Gets the last key|index of an array
+     *
+     * @return string|integer|null
+     */
+    public function lastKey() -> string|int|null
+    {
+        return array_key_last($this->cont);
+    }
+
+    // Implementing \Iterator
+
+     public function rewind() -> void 
+     {
+        let this->pos = 0;
+    }
+
+    public function current() -> mixed
+    {
+        return this->cont[this->pos];
+    }
+
+    public function key() -> mixed
+    {
+        return this->pos;
+    }
+
+    public function next() -> void 
+    {
+        let this->pos ++;
+    }
+
+    public function valid() -> bool 
+    {
+        return isset(this->cont[this->pos]);
+    }
     
 }
 

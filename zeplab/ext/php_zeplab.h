@@ -15,7 +15,7 @@
 #define PHP_ZEPLAB_EXTNAME     "zeplab"
 #define PHP_ZEPLAB_AUTHOR      "Sven Schrodt"
 #define PHP_ZEPLAB_ZEPVERSION  "0.19.0-$Id$"
-#define PHP_ZEPLAB_DESCRIPTION "Playground, Incubator & Laboratory for PHP 8.4+ extensions built in Zephir"
+#define PHP_ZEPLAB_DESCRIPTION "Playground, Incubator & Laboratory for PHP 8.4+ extensions built in Zephir - Yippee-ki-yay, $mf!)"
 
 
 

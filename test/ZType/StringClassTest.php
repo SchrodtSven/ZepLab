@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
 use ZepLab\ZType\StringClass;
 
-class BasixTest extends TestCase
+class StringClassTest extends TestCase
 {
 
  

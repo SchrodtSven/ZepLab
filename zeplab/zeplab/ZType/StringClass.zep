@@ -1,5 +1,5 @@
 /**
- * Class managing OOP API to string contents
+ * Class managing OOP API to string conts
  * - check
  * - manipulate
  * - split
@@ -14,7 +14,7 @@ namespace ZepLab\ZType;
 
 class StringClass
 {
-    protected cont; // string content of current instance
+    protected cont; // string cont of current instance
 
     public function __construct(string cont = "")
     {
@@ -58,6 +58,44 @@ class StringClass
         return explode(sep, this->cont);
     }
 
+     public function trim(string characters = null, enc = null)
+    {
+         
+        let this->cont = mb_trim(this->cont, characters, enc);
+        return this;
+    }
+
+    public function toUpper()
+    {
+        let this->cont = strtoupper(this->cont);
+        return this;
+    }
+
+    public function upperFirst()
+    {
+        let this->cont = ucfirst(this->cont);
+        return this;
+    }
+
+    public function subString(int start, int length=0)
+    {
+        return new self(mb_substr(this->cont, start, length));
+    }
+    
+    public function quote(string sign ="'")
+    {
+        this->prepend(sign)->append(sign);
+        return this;
+    }
+
+    public function parseQuery(string query) -> array
+    {
+        // mb_parse_str(string $string, array &$result): bool
+
+        array tmp = [];
+        mb_parse_str(query, tmp);
+        return tmp;
+    }
 
 }
 
