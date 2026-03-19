@@ -19,11 +19,14 @@ class ListClassTest extends TestCase
         $foo = ["id" =>  23, 44, 444];
         $bar = [23, 44, 444];
     
-        for($i=0;$i<count($foo);$i++) {
-            //@FIXME!!!
+        $this->assertTrue(2 == 1+1);
+
+        $fooL = new ListClass($foo);
+        $barL = new ListClass($bar);
+         for($i=0;$i<count($foo);$i++) {
+            $this->assertSame($fooL[$i], $barL[$i]);
         }
-
-
+        
         
     }
 }
