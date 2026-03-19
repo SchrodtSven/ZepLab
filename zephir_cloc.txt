@@ -1,0 +1,10 @@
+Zephir
+    filter remove_matches ^\s*#
+    filter rm_comments_in_strings " /* */
+    filter rm_comments_in_strings " // 
+    filter call_regexp_common C++
+    filter remove_inline #.*$
+    extension zep
+    script_exe zep
+    script_exe zep2
+    3rd_gen_scale 5.0

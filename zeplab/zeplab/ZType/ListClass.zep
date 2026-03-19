@@ -16,7 +16,7 @@ class ListClass implements \Countable, \ArrayAccess, \Iterator
 {
     protected cont; // content of current instance
 
-    protected pos = 0;  // current/initial position of list element
+    protected pos = 0;  // current position of list element
 
     public function __construct(array cont = [])
     {
@@ -65,7 +65,7 @@ class ListClass implements \Countable, \ArrayAccess, \Iterator
 
     // Stack operations
 
-    public function push(mixed value)
+    public function push(mixed value) -> <ZepLab\ZType\ListClass>
     {
         array_push(this->cont, value);
         return this;
@@ -76,7 +76,7 @@ class ListClass implements \Countable, \ArrayAccess, \Iterator
         return array_pop(this->cont);
     }
 
-    public function unshift(mixed value)
+    public function unshift(mixed value) -> <ZepLab\ZType\ListClass>
     {
         array_unshift(this->cont, value);
         return this;

@@ -25,6 +25,7 @@
 /opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_variables.h:80:35: note: passing argument to parameter 'zval_ptr' here
    80 | ZEND_API void zval_ptr_dtor(zval *zval_ptr);
       |                                   ^
+2 warnings generated.
 /Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/file.c:179:74: warning: format specifies type 'int' but the argument has type 'zend_long' (aka 'long long') [-Wformat]
   179 |                 php_error_docref(NULL, E_WARNING, "%d is not a valid stream resource", stream->res->handle);
       |                                                    ~~                                  ^~~~~~~~~~~~~~~~~~~
@@ -35,7 +36,6 @@
 /opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_variables.h:80:35: note: passing argument to parameter 'zval_ptr' here
    80 | ZEND_API void zval_ptr_dtor(zval *zval_ptr);
       |                                   ^
-2 warnings generated.
 3 warnings generated.
 /Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/listclass.zep.c:58:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zval **' (aka 'struct _zval_struct **') [-Wincompatible-pointer-types]
    58 |                 Z_PARAM_ARRAY(cont)

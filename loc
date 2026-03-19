@@ -1,0 +1,2 @@
+#!/bin/sh
+cloc . --read-lang-def=zephir_cloc.txt --exclude-dir=tmp,vendor,ext,phpunit,ide,.phpunit.cache,.zephir

@@ -26,7 +26,7 @@ class StringClass
         return this->cont;
     }
 
-    public function has(string needle)
+    public function has(string needle) -> bool
     {
         return str_contains(this->cont, needle);
     }
@@ -41,13 +41,13 @@ class StringClass
         return str_ends_with(this->cont, needle);
     }
 
-    public function append(string txt) 
+    public function append(string txt) -> <ZepLab\ZType\StringClass>
     {
         let this->cont = this->cont . txt;
         return this;
     }
 
-    public function prepend(string txt) 
+    public function prepend(string txt)   -> <ZepLab\ZType\StringClass>
     {
         let this->cont = txt . this->cont;
         return this;
@@ -58,31 +58,31 @@ class StringClass
         return explode(sep, this->cont);
     }
 
-     public function trim(string characters = null, enc = null)
+     public function trim(string characters = null, enc = null) -> <ZepLab\ZType\StringClass>
     {
          
         let this->cont = mb_trim(this->cont, characters, enc);
         return this;
     }
 
-    public function toUpper()
+    public function toUpper() -> <ZepLab\ZType\StringClass>
     {
         let this->cont = strtoupper(this->cont);
         return this;
     }
 
-    public function upperFirst()
+    public function upperFirst() -> <ZepLab\ZType\StringClass>
     {
         let this->cont = ucfirst(this->cont);
         return this;
     }
 
-    public function subString(int start, int length=0)
+    public function subString(int start, int length=0) -> <ZepLab\ZType\StringClass>
     {
         return new self(mb_substr(this->cont, start, length));
     }
     
-    public function quote(string sign ="'")
+    public function quote(string sign ="'") -> <ZepLab\ZType\StringClass>
     {
         this->prepend(sign)->append(sign);
         return this;
