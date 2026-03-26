@@ -1,5 +1,3 @@
 cd zeplab
-zephir fullclean 
+zephir fullclean
 zephir build 
-zephir fullclean 
-zephir stubs

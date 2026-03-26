@@ -8,9 +8,9 @@ require_once 'src/PreParser.php';
 
 $file = [
     "zeplab/zeplab/ZType/ListClass.zep",
-    "zeplab/zeplab/ZType/StringClass.zep",
-    "zeplab/zeplab/Net/TcpServer.zep",
-    "zeplab/zeplab/Net/Zeliza.zep",
+    //"zeplab/zeplab/ZType/StringClass.zep",
+    //"zeplab/zeplab/Net/TcpServer.zep",
+    //"zeplab/zeplab/Net/Zeliza.zep",
 ];
 
 $parser = new PreParser($file);

@@ -144,18 +144,19 @@ class ListClass implements \Countable, \ArrayAccess, \Iterator
     }
 
     // m&r stuff
-    public function reduce(callable callback, mixed initial = null) -> mixed
+    public function reduce(callable callback, initial = null) -> mixed
     {
         return array_reduce(this->cont, callback, initial);
     }
 
-    public function map(callable callback, mixed initial = null) -> mixed
+    public function map(callable callback, initial = null) -> mixed
     {
+        var tmp;
         let tmp = array_map(callback, this->cont);
         return new self(tmp);
     }
 
-    public function walk(callable $callback, mixed $arg = null) -> <ZepLab\ZType\ListClass>
+    public function walk(callable $callback, arg = null) -> <ZepLab\ZType\ListClass>
     {
         array_walk(this->cont, callback, arg );
         return this;

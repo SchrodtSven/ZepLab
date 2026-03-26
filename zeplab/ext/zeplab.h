@@ -6,6 +6,5 @@
 
 #include "zeplab/core/foo.zep.h"
 #include "zeplab/ztype/listclass.zep.h"
-#include "zeplab/ztype/stringclass.zep.h"
 
 #endif

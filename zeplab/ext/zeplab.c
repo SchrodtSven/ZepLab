@@ -25,7 +25,6 @@
 
 zend_class_entry *zeplab_core_foo_ce;
 zend_class_entry *zeplab_ztype_listclass_ce;
-zend_class_entry *zeplab_ztype_stringclass_ce;
 
 ZEND_DECLARE_MODULE_GLOBALS(zeplab)
 
@@ -39,7 +38,6 @@ static PHP_MINIT_FUNCTION(zeplab)
 	zephir_module_init();
 	ZEPHIR_INIT(ZepLab_Core_Foo);
 	ZEPHIR_INIT(ZepLab_ZType_ListClass);
-	ZEPHIR_INIT(ZepLab_ZType_StringClass);
 	
 	return SUCCESS;
 }

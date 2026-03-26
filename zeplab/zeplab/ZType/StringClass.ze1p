@@ -84,7 +84,8 @@ class StringClass
     
     public function quote(string sign ="'") -> <ZepLab\ZType\StringClass>
     {
-        this->prepend(sign)->append(sign);
+        this->prepend(sign);
+        this->append(sign);
         return this;
     }
 

@@ -24,6 +24,7 @@ class PreParser
 
     private const int EXT_ERR = 12 + 11;
 
+    // @FIXME add method run() && add stopOn* to signature!
     public function __construct(private string|array $file)
     {
         if (is_array($file)) {

@@ -2,210 +2,58 @@
   275 |         if (zend_hash_str_exists(CG(function_table), function_name, function_len) != NULL) {
       |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~
 1 warning generated.
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/array.c:507:67: warning: format specifies type 'long' but the argument has type 'zend_ulong' (aka 'unsigned long long') [-Wformat]
-  507 |                                 zend_error(E_NOTICE, "Undefined index: %ld in %s on line %d", uidx, file, line);
-      |                                                                        ~~~                    ^~~~
-      |                                                                        %llu
-1 warning generated.
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/require.c:54:19: warning: incompatible pointer types passing 'zend_string *' (aka 'struct _zend_string *') to parameter of type 'zval *' (aka 'struct _zval_struct *') [-Wincompatible-pointer-types]
-   54 |     zval_ptr_dtor(zend_string_path);
-      |                   ^~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_variables.h:80:35: note: passing argument to parameter 'zval_ptr' here
-   80 | ZEND_API void zval_ptr_dtor(zval *zval_ptr);
-      |                                   ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/require.c:127:19: warning: incompatible pointer types passing 'zend_string *' (aka 'struct _zend_string *') to parameter of type 'zval *' (aka 'struct _zval_struct *') [-Wincompatible-pointer-types]
-  127 |     zval_ptr_dtor(zend_string_path);
-      |                   ^~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_variables.h:80:35: note: passing argument to parameter 'zval_ptr' here
-   80 | ZEND_API void zval_ptr_dtor(zval *zval_ptr);
-      |                                   ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/file.c:71:16: warning: incompatible pointer types passing 'zend_string *' (aka 'struct _zend_string *') to parameter of type 'zval *' (aka 'struct _zval_struct *') [-Wincompatible-pointer-types]
-   71 |         zval_ptr_dtor(file);
-      |                       ^~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_variables.h:80:35: note: passing argument to parameter 'zval_ptr' here
-   80 | ZEND_API void zval_ptr_dtor(zval *zval_ptr);
-      |                                   ^
-2 warnings generated.
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/file.c:179:74: warning: format specifies type 'int' but the argument has type 'zend_long' (aka 'long long') [-Wformat]
-  179 |                 php_error_docref(NULL, E_WARNING, "%d is not a valid stream resource", stream->res->handle);
-      |                                                    ~~                                  ^~~~~~~~~~~~~~~~~~~
-      |                                                    %lld
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/file.c:300:17: warning: incompatible pointer types passing 'zend_string *' (aka 'struct _zend_string *') to parameter of type 'zval *' (aka 'struct _zval_struct *') [-Wincompatible-pointer-types]
-  300 |                 zval_ptr_dtor(file);
-      |                               ^~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_variables.h:80:35: note: passing argument to parameter 'zval_ptr' here
-   80 | ZEND_API void zval_ptr_dtor(zval *zval_ptr);
-      |                                   ^
-3 warnings generated.
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/listclass.zep.c:58:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zval **' (aka 'struct _zval_struct **') [-Wincompatible-pointer-types]
-   58 |                 Z_PARAM_ARRAY(cont)
-      |                 ^~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:1683:2: note: expanded from macro 'Z_PARAM_ARRAY'
- 1683 |         Z_PARAM_ARRAY_EX(dest, 0, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:1680:2: note: expanded from macro 'Z_PARAM_ARRAY_EX'
- 1680 |         Z_PARAM_ARRAY_EX2(dest, check_null, separate, separate)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:1673:46: note: expanded from macro 'Z_PARAM_ARRAY_EX2'
- 1673 |                 if (UNEXPECTED(!zend_parse_arg_array(_arg, &dest, check_null, 0))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2363:71: note: passing argument to parameter 'dest' here
- 2363 | static zend_always_inline bool zend_parse_arg_array(zval *arg, zval **dest, bool check_null, bool or_object)
-      |                                                                       ^
-1 warning generated.
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/stringclass.zep.c:52:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
-   52 |                 Z_PARAM_STR(cont)
-      |                 ^~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2087:2: note: expanded from macro 'Z_PARAM_STR'
- 2087 |         Z_PARAM_STR_EX(dest, 0, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
- 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
- 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
-      |                                                                            ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/stringclass.zep.c:84:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
-   84 |                 Z_PARAM_STR(needle)
-      |                 ^~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2087:2: note: expanded from macro 'Z_PARAM_STR'
- 2087 |         Z_PARAM_STR_EX(dest, 0, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
- 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
- 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
-      |                                                                            ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/stringclass.zep.c:107:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
-  107 |                 Z_PARAM_STR(needle)
-      |                 ^~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2087:2: note: expanded from macro 'Z_PARAM_STR'
- 2087 |         Z_PARAM_STR_EX(dest, 0, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
- 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
- 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
-      |                                                                            ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/stringclass.zep.c:130:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
-  130 |                 Z_PARAM_STR(needle)
-      |                 ^~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2087:2: note: expanded from macro 'Z_PARAM_STR'
- 2087 |         Z_PARAM_STR_EX(dest, 0, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
- 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
- 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
-      |                                                                            ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/stringclass.zep.c:153:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
-  153 |                 Z_PARAM_STR(txt)
-      |                 ^~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2087:2: note: expanded from macro 'Z_PARAM_STR'
- 2087 |         Z_PARAM_STR_EX(dest, 0, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
- 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
- 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
-      |                                                                            ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/stringclass.zep.c:177:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
-  177 |                 Z_PARAM_STR(txt)
-      |                 ^~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2087:2: note: expanded from macro 'Z_PARAM_STR'
- 2087 |         Z_PARAM_STR_EX(dest, 0, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
- 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
- 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
-      |                                                                            ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/stringclass.zep.c:201:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
-  201 |                 Z_PARAM_STR(sep)
-      |                 ^~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2087:2: note: expanded from macro 'Z_PARAM_STR'
- 2087 |         Z_PARAM_STR_EX(dest, 0, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
- 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
- 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
-      |                                                                            ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/stringclass.zep.c:233:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
-  233 |                 Z_PARAM_STR_OR_NULL(characters)
-      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2090:2: note: expanded from macro 'Z_PARAM_STR_OR_NULL'
- 2090 |         Z_PARAM_STR_EX(dest, 1, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
- 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
- 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
-      |                                                                            ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/stringclass.zep.c:337:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
-  337 |                 Z_PARAM_STR(sign)
-      |                 ^~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2087:2: note: expanded from macro 'Z_PARAM_STR'
- 2087 |         Z_PARAM_STR_EX(dest, 0, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
- 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
- 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
-      |                                                                            ^
-/Users/svenschrodt/projx/ZepLab/zeplab/ext/zeplab/ztype/stringclass.zep.c:366:3: warning: incompatible pointer types passing 'zval *' (aka 'struct _zval_struct *') to parameter of type 'zend_string **' (aka 'struct _zend_string **') [-Wincompatible-pointer-types]
-  366 |                 Z_PARAM_STR(query)
-      |                 ^~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2087:2: note: expanded from macro 'Z_PARAM_STR'
- 2087 |         Z_PARAM_STR_EX(dest, 0, 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2080:44: note: expanded from macro 'Z_PARAM_STR_EX'
- 2080 |                 if (UNEXPECTED(!zend_parse_arg_str(_arg, &dest, check_null, _i))) { \
-      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_portability.h:387:52: note: expanded from macro 'UNEXPECTED'
-  387 | # define UNEXPECTED(condition) __builtin_expect(!!(condition), 0)
-      |                                                    ^~~~~~~~~
-/opt/homebrew/Cellar/php@8.4/8.4.19/include/php/Zend/zend_API.h:2300:76: note: passing argument to parameter 'dest' here
- 2300 | static zend_always_inline bool zend_parse_arg_str(zval *arg, zend_string **dest, bool check_null, uint32_t arg_num)
-      |                                                                            ^
-10 warnings generated.
-ld: warning: -undefined suppress is deprecated
-warning: no debug symbols in executable (-arch arm64)
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:46:26: error: call to undeclared function 'zend_exception_get_default'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   46 |                 object_init_ex(object, zend_exception_get_default());
+      |                                        ^
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:46:26: note: did you mean 'zend_exception_set_previous'?
+/opt/homebrew/Cellar/php/8.5.0/include/php/Zend/zend_exceptions.h:43:15: note: 'zend_exception_set_previous' declared here
+   43 | ZEND_API void zend_exception_set_previous(zend_object *exception, zend_object *add_previous);
+      |               ^
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:46:26: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'zend_class_entry *' (aka 'struct _zend_class_entry *') [-Wint-conversion]
+   46 |                 object_init_ex(object, zend_exception_get_default());
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/php/8.5.0/include/php/Zend/zend_API.h:541:66: note: passing argument to parameter 'ce' here
+  541 | ZEND_API zend_result object_init_ex(zval *arg, zend_class_entry *ce);
+      |                                                                  ^
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:57:27: error: call to undeclared function 'zend_exception_get_default'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   57 |                         default_exception_ce = zend_exception_get_default();
+      |                                                ^
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:57:25: error: incompatible integer to pointer conversion assigning to 'zend_class_entry *' (aka 'struct _zend_class_entry *') from 'int' [-Wint-conversion]
+   57 |                         default_exception_ce = zend_exception_get_default();
+      |                                              ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:85:26: error: call to undeclared function 'zend_exception_get_default'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   85 |                 default_exception_ce = zend_exception_get_default();
+      |                                        ^
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:85:24: error: incompatible integer to pointer conversion assigning to 'zend_class_entry *' (aka 'struct _zend_class_entry *') from 'int' [-Wint-conversion]
+   85 |                 default_exception_ce = zend_exception_get_default();
+      |                                      ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6 errors generated.
+make: *** [kernel/exception.lo] Error 1
+make: *** Waiting for unfinished jobs....
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:46:26: error: call to undeclared function 'zend_exception_get_default'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   46 |                 object_init_ex(object, zend_exception_get_default());
+      |                                        ^
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:46:26: note: did you mean 'zend_exception_set_previous'?
+/opt/homebrew/Cellar/php/8.5.0/include/php/Zend/zend_exceptions.h:43:15: note: 'zend_exception_set_previous' declared here
+   43 | ZEND_API void zend_exception_set_previous(zend_object *exception, zend_object *add_previous);
+      |               ^
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:46:26: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'zend_class_entry *' (aka 'struct _zend_class_entry *') [-Wint-conversion]
+   46 |                 object_init_ex(object, zend_exception_get_default());
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/php/8.5.0/include/php/Zend/zend_API.h:541:66: note: passing argument to parameter 'ce' here
+  541 | ZEND_API zend_result object_init_ex(zval *arg, zend_class_entry *ce);
+      |                                                                  ^
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:57:27: error: call to undeclared function 'zend_exception_get_default'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   57 |                         default_exception_ce = zend_exception_get_default();
+      |                                                ^
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:57:25: error: incompatible integer to pointer conversion assigning to 'zend_class_entry *' (aka 'struct _zend_class_entry *') from 'int' [-Wint-conversion]
+   57 |                         default_exception_ce = zend_exception_get_default();
+      |                                              ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:85:26: error: call to undeclared function 'zend_exception_get_default'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   85 |                 default_exception_ce = zend_exception_get_default();
+      |                                        ^
+/Users/svenschrodt/projx/ZepLab/zeplab/ext/kernel/exception.c:85:24: error: incompatible integer to pointer conversion assigning to 'zend_class_entry *' (aka 'struct _zend_class_entry *') from 'int' [-Wint-conversion]
+   85 |                 default_exception_ce = zend_exception_get_default();
+      |                                      ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6 errors generated.
+make: *** [kernel/exception.lo] Error 1
