@@ -32,6 +32,7 @@ class ListClass implements \Countable, \ArrayAccess, \Iterator
         return this->cont;
     }
 
+    // Implementing \Countable
     public function count() -> int
     {
         return count(this->cont);
@@ -110,8 +111,8 @@ class ListClass implements \Countable, \ArrayAccess, \Iterator
 
     // Implementing \Iterator
 
-     public function rewind() -> void 
-     {
+    public function rewind() -> void 
+    {
         let this->pos = 0;
     }
 
@@ -135,6 +136,30 @@ class ListClass implements \Countable, \ArrayAccess, \Iterator
         return isset(this->cont[this->pos]);
     }
     
+
+    // other custom functions
+    public function join(string glue) ->string
+    {
+        return implode(glue, this->cont);
+    }
+
+    // m&r stuff
+    public function reduce(callable callback, mixed initial = null) -> mixed
+    {
+        return array_reduce(this->cont, callback, initial);
+    }
+
+    public function map(callable callback, mixed initial = null) -> mixed
+    {
+        let tmp = array_map(callback, this->cont);
+        return new self(tmp);
+    }
+
+    public function walk(callable $callback, mixed $arg = null) -> <ZepLab\ZType\ListClass>
+    {
+        array_walk(this->cont, callback, arg );
+        return this;
+    }
 }
 
 
