@@ -1,5 +1,7 @@
 <?php
 
-use ZepLab\Foo;
-
-echo (new Foo())->mirror("Sven Glück auf!");
+class Foo
+{
+    protected int $bar = 42;
+}
+       
