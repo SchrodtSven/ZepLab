@@ -22,3 +22,4 @@ clp.txt
 vendor/
 idez.txt%
 .vscode
+.DS_Store
